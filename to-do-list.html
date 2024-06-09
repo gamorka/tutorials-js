@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List!</title>
-    <style>
+    <!-- <style>
       .toggle-switch {
         position: relative;
         width: 60px;
@@ -61,13 +61,54 @@
       .toggle-checkbox:not(:checked) + .toggle-label:before {
         background-color: #1cc755;
       }
-    </style>
+    </style> -->
   </head>
   <body>
-    <div class="toggle-switch">
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Коло з увігнутою дугою</title>
+        <style>
+          .circle-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+          }
+
+          .circle {
+            width: 100%;
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+          }
+
+          .circle::before {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            border-radius: 0 100% 100% 0;
+            right: 50%;
+            top: 0;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="circle-container">
+          <div class="circle"></div>
+        </div>
+      </body>
+    </html>
+
+    <!-- <div class="toggle-switch">
       <input type="checkbox" id="themeToggle" class="toggle-checkbox" />
       <label for="themeToggle" class="toggle-label"></label>
-    </div>
+    </div> -->
 
     <!-- <p>Todo List</p>
     <input placeholder="Todo name" class="js-name-input" />
